@@ -137,7 +137,16 @@
     	<div class="container">
     		<div class="row d-flex no-gutters">
     			<div class="col-md-6 d-flex">
-    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url('https://i.postimg.cc/2jgBzH8w/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working.jpg');">
+    				<div id="responsiveDiv" class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="
+    background-image: url('https://i.postimg.cc/2jgBzH8w/guy-shows-document-girl-group-young-freelancers-office-have-conversation-working.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px; /* Default height */
+">
+  
+</div>
+
     				</div>
     			</div>
     			<div class="col-md-6 pl-md-5 py-md-5">
@@ -475,6 +484,24 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+    <script>
+    function adjustDivHeight() {
+        var div = document.getElementById('responsiveDiv');
+        if (window.innerWidth <= 576) {
+            div.style.height = '150px';
+        } else if (window.innerWidth <= 768) {
+            div.style.height = '200px';
+        } else {
+            div.style.height = '300px'; // Default height
+        }
+    }
+
+    // Run on page load
+    window.onload = adjustDivHeight;
+
+    // Run on window resize
+    window.onresize = adjustDivHeight;
+</script>
+
   </body>
 </html>
