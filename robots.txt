@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /login/
+Disallow: /register/
+Disallow: /profile/
+
+Allow: /
+Allow: /home
+Allow: /about
+Allow: /services
+Allow: /contact
+
+Sitemap: https://globalbestuae.com/sitemap.xml
