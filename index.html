@@ -14,8 +14,22 @@
 </head>
 <body>
     <!-- No content -->
-    <script>
-        // No JavaScript functionality
+     <script>
+        // Disable right-click
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+        // Disable specific key combinations
+        document.addEventListener("keydown", (event) => {
+            if (
+                event.key === "F12" || // Disable F12
+                (event.ctrlKey && event.shiftKey && event.key === "I") || // Disable Ctrl+Shift+I
+                (event.ctrlKey && event.shiftKey && event.key === "C") || // Disable Ctrl+Shift+C
+                (event.ctrlKey && event.shiftKey && event.key === "J") || // Disable Ctrl+Shift+J
+                (event.ctrlKey && event.key === "U") // Disable Ctrl+U
+            ) {
+                event.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
